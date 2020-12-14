@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="RisCaptureLib.ToolBarControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RisCaptureLib"
+             mc:Ignorable="d"  
+             d:DesignHeight="40" d:DesignWidth="85" Cursor="Arrow" >
+    <UserControl.Resources>
+        <Style TargetType="Button" >
+            <Setter Property="Background" Value="Transparent"></Setter>
+            <Setter Property="BorderThickness" Value="0"></Setter>
+        </Style>
+        <Style TargetType="Image">
+            <Setter Property="Width" Value="20"></Setter>
+            <Setter Property="Height" Value="20"></Setter>
+            <Setter Property="Margin" Value="10"></Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="WhiteSmoke">
+        <StackPanel Orientation="Horizontal">
+            <Button Click="buttonCancel_Click">
+                <Button.Content>
+                    <Image Source="Images/cancel.png"></Image>
+                </Button.Content>
+            </Button>
+            <Button Click="buttonComplete_Click">
+                <Button.Content>
+                    <Image Source="Images/download.png" ></Image>
+                </Button.Content>
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
